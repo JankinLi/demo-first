@@ -1,9 +1,12 @@
 <template>
-  <div id="app">
+  <div id="app1">
     <p>hello World!!!!</p>
-    <p>全局 {{ count }}</p>
+    <p>全局 count={{ count }}</p>
     <hr>
-    <left_part init_msg="这是左边的部分" @countChanged="ValChanged"></left_part>
+    <div class="box">
+      <Left init_msg="这是左边的部分" @countChanged="valChanged"></Left>
+      <Right></Right>
+    </div>
     <hr>
     <img alt="Vue logo" src="./assets/logo.png">
     <hello msg="Lichuan Welcome."></hello>
@@ -14,11 +17,13 @@
 <script>
 import Hello from "@/components/HelloWorld.vue"
 import Left from "@/components/Left.vue"
+import Right from "@/components/Right.vue"
 
 export default{
   components:{
     'hello' : Hello,
-    'left_part': Left,
+    Left,
+    Right,
   },
   data(){
     return {
@@ -26,7 +31,7 @@ export default{
     }
   },
   methods:{
-    ValChanged(val){
+    valChanged(val){
       //console.log('val changed.')
       this.count = val
     }

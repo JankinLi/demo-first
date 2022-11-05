@@ -1,5 +1,5 @@
 <template>
-    <dir id="left" class="box">
+    <dir id="left">
         <h1>This is Left side.</h1>
         <h4>{{ message }}</h4>
         <h4>{{ count }}</h4>
@@ -31,7 +31,10 @@ export default {
 
 <style lang="less" scoped>
     #left{
+        padding:0 20px 20px;
         background-color: pink;
-        height: 300px;
+        min-height: 300px;
+        width:50%;
+        flex:1;
     }
 </style>
