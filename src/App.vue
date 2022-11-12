@@ -22,7 +22,6 @@ import Right from "@/components/Right.vue"
 
 export default{
   components:{
-    
     'hello' : Hello,
     Left,
     Right,
@@ -65,5 +64,8 @@ export default{
   text-align: left;
   color: #2c3e50;
   margin-top: 60px;
+}
+.box{
+  display: flex;
 }
 </style>
